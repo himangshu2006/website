@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav> <!-- Corrected tag from nv to nav -->
+            <div class="logo">
+                <img src="realme.png">
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="mbl.jpeg" class="mobile">
+            <div id="circle">
+                <!-- Your existing code for features -->
+            </div>
+        </div>
+        <div class="controls">
+            <img src="arrow.png" id="upBtn" >
+            <h3>features</h3>
+            <img src="arrow.png" id="downBtn"> <!-- Corrected id from dowmBtn to downBtn -->
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn"); // Corrected id from dowmBtn to downBtn
+
+        var rotateValue = 0;
+
+        upBtn.onclick = function() {
+            rotateValue -= 90;
+            circle.style.transform = `rotate(${rotateValue}deg)`;
+        }
+
+        downBtn.onclick = function() {
+            rotateValue += 90;
+            circle.style.transform = `rotate(${rotateValue}deg)`;
+        }
+    </script>
+</body>
+</html>
